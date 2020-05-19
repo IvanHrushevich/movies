@@ -1,6 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-const app = <div>Hello from React!</div>;
+import {
+  ClassBasedComponent,
+  CreateElementComponent,
+  FunctionalComponent,
+  PureComponent,
+} from "./components/index";
 
-ReactDOM.render(app, document.getElementById('root'));
+const app = (
+  <React.Fragment>
+    <CreateElementComponent />
+    <ClassBasedComponent />
+    <FunctionalComponent />
+    <PureComponent />
+  </React.Fragment>
+);
+
+ReactDOM.render(app, document.getElementById("root"));
