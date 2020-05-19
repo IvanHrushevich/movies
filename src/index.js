@@ -5,16 +5,16 @@ import {
   ClassBasedComponent,
   CreateElementComponent,
   FunctionalComponent,
-  PureComponent,
+  PureReactComponent,
 } from "./components/index";
 
-const app = (
-  <React.Fragment>
+const App = (
+  <>
     <CreateElementComponent />
     <ClassBasedComponent />
     <FunctionalComponent />
-    <PureComponent />
-  </React.Fragment>
+    <PureReactComponent />
+  </>
 );
 
-ReactDOM.render(app, document.getElementById("root"));
+ReactDOM.render(App, document.getElementById("root"));

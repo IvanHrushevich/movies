@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-export class ClassBasedComponent extends React.Component {
+export class ClassBasedComponent extends Component {
   render() {
     return <div>Hello from ClassBasedComponent</div>;
   }

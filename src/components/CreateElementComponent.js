@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-export class CreateElementComponent extends React.Component {
+export class CreateElementComponent extends Component {
   render() {
     return React.createElement(
       "div",
