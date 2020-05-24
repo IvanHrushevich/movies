@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-console.log('isDevelopment', isDevelopment);
 
 module.exports = {
   entry: './src/index.js',
@@ -76,6 +75,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.scss'],
   },
-  watch: isDevelopment,
+  devServer: {
+    contentBase: './dist',
+  },
+  performance: { hints: false },
   mode: isDevelopment ? 'development' : 'production',
 };
