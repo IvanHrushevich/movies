@@ -1,12 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 import {
   ClassBasedComponent,
   CreateElementComponent,
   FunctionalComponent,
   PureReactComponent,
-} from "./components/index";
+} from './components/index';
+import './main';
 
 const App = (
   <>
@@ -17,4 +18,4 @@ const App = (
   </>
 );
 
-ReactDOM.render(App, document.getElementById("root"));
+ReactDOM.render(App, document.getElementById('root'));
