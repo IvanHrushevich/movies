@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-export const FunctionalComponent = () => (
-  <div>Hello from FunctionalComponent</div>
-);
+import classes from './FunctionalComponent.module';
+
+export const FunctionalComponent = () => <div className={classes.block}>Hello from FunctionalComponent</div>;
