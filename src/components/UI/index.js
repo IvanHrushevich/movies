@@ -1,2 +1,4 @@
 export * from './Button/Button';
-export * from './SortController/SortController';
+export * from './Logo/Logo';
+export * from './SearchControl/SearchControl';
+export * from './SortControl/SortControl';

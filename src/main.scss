@@ -3,6 +3,8 @@
 * {
   margin: 0;
   padding: 0;
+  line-height: 1.2;
+  box-sizing: border-box;
 }
 
 html,
@@ -13,6 +15,9 @@ body {
 html {
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  color: $white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
 }
 
 .root {
@@ -21,17 +26,18 @@ html {
   min-height: 100%;
 }
 
-button {
-  background-color: $button-color;
+button,
+input {
+  background-color: $semi-transparent-black;
   outline: none;
   border: none;
 
   &:hover {
-    background-color: darken($button-color, 10%);
+    background-color: $gray-dark;
   }
 
   &:active,
   &:focus {
-    background-color: darken($button-color, 30%);
+    background-color: $gray-dark;
   }
 }

@@ -3,5 +3,6 @@
 .container {
   flex-grow: 1;
   min-height: 60rem;
+  padding: $container-padding;
   background-color: $content-section-color;
 }

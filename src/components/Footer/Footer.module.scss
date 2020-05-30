@@ -3,4 +3,8 @@
 .container {
   height: 7rem;
   background-color: $footer-color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

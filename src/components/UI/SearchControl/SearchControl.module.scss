@@ -1,0 +1,11 @@
+@import '../../../shared/variables.scss';
+
+.container {
+  height: 4.5rem;
+  width: 100%;
+  display: flex;
+}
+
+input {
+  background-color: $semi-transparent-black;
+}
