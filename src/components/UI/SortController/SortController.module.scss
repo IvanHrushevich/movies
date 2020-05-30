@@ -1,0 +1,12 @@
+@import '../../../shared/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+  color: #ccc;
+}

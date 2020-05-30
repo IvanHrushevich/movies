@@ -1,4 +1,7 @@
+@import '../../shared/variables.scss';
+
 .container {
   flex-grow: 1;
-  background-color: #ccc;
+  min-height: 60rem;
+  background-color: $content-section-color;
 }

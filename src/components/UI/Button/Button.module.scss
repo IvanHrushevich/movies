@@ -1,0 +1,13 @@
+@import '../../../shared/variables.scss';
+
+.button {
+  font-size: 1.2rem;
+  background-color: $button-color;
+  color: $white;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.selected {
+  background-color: $red;
+}

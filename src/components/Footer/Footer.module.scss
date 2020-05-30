@@ -1,4 +1,6 @@
+@import '../../shared/variables.scss';
+
 .container {
-  height: 5rem;
-  background-color: #000;
+  height: 7rem;
+  background-color: $footer-color;
 }
