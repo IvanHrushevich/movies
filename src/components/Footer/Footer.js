@@ -4,7 +4,7 @@ import classes from './Footer.module.scss';
 import { Logo } from '../UI/index';
 
 export const Footer = () => (
-  <div className={classes.container}>
+  <section className={classes.section}>
     <Logo />
-  </div>
+  </section>
 );

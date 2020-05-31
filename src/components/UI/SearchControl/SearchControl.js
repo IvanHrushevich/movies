@@ -5,7 +5,7 @@ import { Button } from '../Button/Button';
 
 export const SearchControl = () => (
   <div className={classes.container}>
-    <input placeholder="Search" />
-    <Button>Search</Button>
+    <input className={classes.input} placeholder="Search" />
+    <button className={classes.button}>search</button>
   </div>
 );

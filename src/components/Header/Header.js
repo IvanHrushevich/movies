@@ -6,16 +6,16 @@ import { Logo, SearchControl, SortControl } from '../UI/index';
 
 export const Header = () => (
   <>
-    <div className={classes.container}>
+    <section className={classes.sectionHeader}>
       <Logo />
-      <div className={classes.searchBlock}>
+      <div className={`container-global ${classes.searchBlock}`}>
         <p className={classes.title}>FIND YOUR MOVIE</p>
-        <SearchControl />
+        <div className={classes.searchControl}>
+          <SearchControl />
+        </div>
         <SortControl label="search by" btn1Label="title" btn2Label="gengre" />
       </div>
-    </div>
-    <div className={classes.sortPanel}>
-      <SortPanel />
-    </div>
+    </section>
+    <SortPanel />
   </>
 );

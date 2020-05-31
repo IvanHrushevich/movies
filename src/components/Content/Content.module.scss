@@ -1,13 +1,17 @@
 @import '../../shared/variables.scss';
 
-.container {
+.section {
   flex-grow: 1;
   min-height: 60rem;
   padding: $container-padding;
   background-color: $content-section-color;
+}
 
+.cardsWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+  max-width: 144rem;
+  margin: 0 auto;
 }

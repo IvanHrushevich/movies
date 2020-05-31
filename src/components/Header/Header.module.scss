@@ -1,6 +1,6 @@
 @import '../../shared/variables.scss';
 
-.container {
+.sectionHeader {
   padding: 1rem $container-padding 0 $container-padding;
   height: 40rem;
   display: flex;
@@ -8,15 +8,11 @@
   background-color: $header-color;
 }
 
-.searchBlock {
-  margin: 6rem 6rem 0 11rem;
+.sectionHeader .searchBlock {
+  margin-top: 6rem;
 }
 
 .title {
   font-size: 4rem;
   margin-bottom: 3rem;
-}
-
-.sortPanel {
-  margin-top: auto;
 }

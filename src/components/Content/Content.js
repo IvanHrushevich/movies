@@ -14,5 +14,9 @@ export const Content = ({ movies }) => {
     />
   ));
 
-  return <div className={classes.container}>{movieCards}</div>;
+  return (
+    <section className={classes.section}>
+      <div className={classes.cardsWrapper}>{movieCards}</div>
+    </section>
+  );
 };

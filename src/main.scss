@@ -46,3 +46,9 @@ a {
   text-decoration: none;
   color: $white;
 }
+
+.container-global {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
