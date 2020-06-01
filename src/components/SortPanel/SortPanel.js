@@ -7,9 +7,10 @@ export const SortPanel = () => (
   <section className={classes.section}>
     <div className="container-global">
       <SortControl
-        label="sort by"
+        title="sort by"
         btn1Label="release date"
         btn2Label="rating"
+        inputName="sortBy"
       />
     </div>
   </section>

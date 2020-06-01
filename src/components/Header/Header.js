@@ -13,7 +13,12 @@ export const Header = () => (
         <div className={classes.searchControl}>
           <SearchControl />
         </div>
-        <SortControl label="search by" btn1Label="title" btn2Label="gengre" />
+        <SortControl
+          title="search by"
+          btn1Label="title"
+          btn2Label="gengre"
+          inputName="searchBy"
+        />
       </div>
     </section>
     <SortPanel />

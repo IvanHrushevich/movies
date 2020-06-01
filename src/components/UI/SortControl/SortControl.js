@@ -1,12 +1,30 @@
 import React from 'react';
 
 import classes from './SortControl.module.scss';
-import { Button } from '../Button/Button';
 
-export const SortControl = (props) => (
+export const SortControl = ({ title, btn1Label, btn2Label, inputName }) => (
   <div className={classes.container}>
-    <span className={classes.label}>{props.label.toUpperCase()}</span>
-    <Button>{props.btn1Label.toUpperCase()}</Button>
-    <Button>{props.btn2Label.toUpperCase()}</Button>
+    <span className={classes.title}>{title.toUpperCase()}</span>
+
+    <input
+      className={classes.input}
+      type="radio"
+      name={inputName}
+      id={btn1Label}
+    />
+    <label className={classes.label} for={btn1Label}>
+      {btn1Label}
+    </label>
+
+    <input
+      className={classes.input}
+      type="radio"
+      name={inputName}
+      id={btn2Label}
+      checked
+    />
+    <label className={classes.label} for={btn2Label}>
+      {btn2Label}
+    </label>
   </div>
 );
