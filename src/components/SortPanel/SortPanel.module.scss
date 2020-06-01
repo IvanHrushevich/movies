@@ -3,5 +3,9 @@
 .section {
   background-color: $sort-panel-color;
   height: 5.5rem;
+}
+
+.panelContainer {
   display: flex;
+  justify-content: flex-end;
 }
