@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   background-color: $header-color;
+  background: url('../../assets/header-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sectionHeader .searchBlock {

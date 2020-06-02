@@ -6,7 +6,7 @@ import { Logo, SearchControl, SortControl } from '../UI/index';
 
 export const Header = () => (
   <>
-    <section className={classes.sectionHeader}>
+    <header className={classes.sectionHeader}>
       <Logo />
       <div className={`container-global ${classes.searchBlock}`}>
         <p className={classes.title}>FIND YOUR MOVIE</p>
@@ -20,7 +20,7 @@ export const Header = () => (
           inputName="searchBy"
         />
       </div>
-    </section>
+    </header>
     <SortPanel />
   </>
 );

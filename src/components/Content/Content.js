@@ -15,8 +15,8 @@ export const Content = ({ movies }) => {
   ));
 
   return (
-    <section className={classes.section}>
+    <main className={classes.section}>
       <div className={classes.cardsWrapper}>{movieCards}</div>
-    </section>
+    </main>
   );
 };
