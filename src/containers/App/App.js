@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { Content, Footer, Header } from '../../components/index';
+import { ErrorBoundary } from '../../hoc/index';
 
 export class App extends Component {
   state = {
@@ -52,11 +53,11 @@ export class App extends Component {
 
   render() {
     return (
-      <>
+      <ErrorBoundary>
         <Header />
         <Content movies={this.state.movies} />
         <Footer />
-      </>
+      </ErrorBoundary>
     );
   }
 }
