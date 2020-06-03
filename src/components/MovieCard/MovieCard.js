@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import classes from './MovieCard.module.scss';
 
@@ -14,3 +15,10 @@ export const MovieCard = ({ src, title, genre, year }) => (
     </div>
   </a>
 );
+
+MovieCard.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.string,
+  genre: PropTypes.string,
+  year: PropTypes.string,
+};
