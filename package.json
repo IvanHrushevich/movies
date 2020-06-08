@@ -8,7 +8,8 @@
     "build": "env NODE_ENV=development webpack",
     "build.prod": "env NODE_ENV=production webpack",
     "serve": "nodemon ./server.js",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "test.coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
     "enzyme-to-json": "^3.5.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "prettier": "2.0.5",
@@ -46,16 +48,5 @@
     "react-redux": "^7.2.0",
     "react-router": "^5.2.0",
     "redux": "^4.0.5"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "setupFilesAfterEnv": [
-      "./src/setupTests.js"
-    ],
-    "transform": {
-      "^.+\\.js$": "babel-jest"
-    }
   }
 }

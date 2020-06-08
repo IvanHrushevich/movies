@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render properly 1`] = `
+<ErrorBoundary>
+  <Header />
+  <Content
+    movies={
+      Array [
+        Object {
+          "genre": "Action",
+          "id": "a1",
+          "src": "https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+        Object {
+          "genre": "Action",
+          "id": "a2",
+          "src": "https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+        Object {
+          "genre": "Action",
+          "id": "a3",
+          "src": "https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+        Object {
+          "genre": "Action",
+          "id": "a4",
+          "src": "https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+        Object {
+          "genre": "Action",
+          "id": "a5",
+          "src": "https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+        Object {
+          "genre": "Action",
+          "id": "a6",
+          "src": "https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg",
+          "title": "Kill Bill: Vol.2",
+          "year": "2004",
+        },
+      ]
+    }
+  />
+  <Footer />
+</ErrorBoundary>
+`;
