@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import classes from './Content.module.scss';
 import { MovieCard } from '../MovieCard/MovieCard';
 
-export const Content = ({ movies }) => {
+const Content = ({ movies }) => {
   const movieCards = movies.map((movie) => (
     <MovieCard
       src={movie.poster_path}
@@ -25,3 +26,7 @@ export const Content = ({ movies }) => {
 Content.propTypes = {
   movies: PropTypes.array,
 };
+
+const mapStateToProps = (state) => ({ movies: state.movies });
+
+export default connect(mapStateToProps)(Content);
