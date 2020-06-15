@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortControl should render properly 1`] = `
+<div
+  className="container"
+>
+  <span
+    className="title"
+  />
+  <input
+    className="input"
+    type="radio"
+  />
+  <label
+    className="label"
+  />
+  <input
+    className="input"
+    type="radio"
+  />
+  <label
+    className="label"
+  />
+</div>
+`;

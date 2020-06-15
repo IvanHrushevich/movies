@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieCard should render properly 1`] = `
+<a
+  className="container"
+  href="/"
+>
+  <img
+    className="pic"
+  />
+  <div
+    className="info"
+  >
+    <div>
+      <p
+        className="title"
+      />
+      <p
+        className="genre"
+      />
+    </div>
+    <span
+      className="year"
+    />
+  </div>
+</a>
+`;

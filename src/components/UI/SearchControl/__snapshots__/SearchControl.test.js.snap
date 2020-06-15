@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchControl should render properly 1`] = `
+<div
+  className="container"
+>
+  <input
+    className="input"
+    placeholder="Search"
+  />
+  <button
+    className="button"
+  >
+    search
+  </button>
+</div>
+`;
