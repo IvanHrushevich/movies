@@ -7,7 +7,7 @@ import { MovieCard } from '../MovieCard/MovieCard';
 export const Content = ({ movies }) => {
   const movieCards = movies.map((movie) => (
     <MovieCard
-      src={movie.src}
+      src={movie.poster_path}
       title={movie.title}
       genre={movie.genre}
       year={movie.year}

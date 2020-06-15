@@ -1,63 +1,25 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Content, Footer, Header } from '../../components/index';
 import { ErrorBoundary } from '../../hoc/index';
 
-export class App extends Component {
-  state = {
-    movies: [
-      {
-        src: 'https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg',
-        id: 'a1',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-      {
-        src: 'https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg',
-        id: 'a2',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-      {
-        src: 'https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg',
-        id: 'a3',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-      {
-        src: 'https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg',
-        id: 'a4',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-      {
-        src: 'https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg',
-        id: 'a5',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-      {
-        src: 'https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg',
-        id: 'a6',
-        title: 'Kill Bill: Vol.2',
-        genre: 'Action',
-        year: '2004',
-      },
-    ],
-  };
+export const App = () => {
+  const [movies, setMovies] = useState([]);
 
-  render() {
-    return (
-      <ErrorBoundary>
-        <Header />
-        <Content movies={this.state.movies} />
-        <Footer />
-      </ErrorBoundary>
-    );
-  }
-}
+  useEffect(() => {
+    (async () => {
+      const response = await fetch('http://reactjs-cdp.herokuapp.com/movies');
+      const fetchedData = await response.json();
+
+      setMovies(fetchedData.data);
+    })();
+  }, []);
+
+  return (
+    <ErrorBoundary>
+      <Header />
+      <Content movies={movies} />
+      <Footer />
+    </ErrorBoundary>
+  );
+};
