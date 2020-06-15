@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 
 import { App } from './containers/index';
 import './main';
-import { moviesReducer } from './store/reducers/index';
+import { moviesReducer, watchMovies } from './store/index';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(moviesReducer, composeEnhancers());
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+  moviesReducer,
+  composeEnhancers(applyMiddleware(sagaMiddleware))
+);
+
+sagaMiddleware.run(watchMovies);
 
 ReactDOM.render(
   <Provider store={store}>

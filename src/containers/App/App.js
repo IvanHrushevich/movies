@@ -1,21 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { Content, Footer, Header } from '../../components/index';
 import { ErrorBoundary } from '../../hoc/index';
-import { fetchMoviesSuccess } from '../../store/index';
+import { movieActions } from '../../store/index';
 
-const App = (props) => {
-  const [movies, setMovies] = useState([]);
-
+const App = ({ fetchMovies }) => {
   useEffect(() => {
-    (async () => {
-      const response = await fetch('http://reactjs-cdp.herokuapp.com/movies');
-      const fetchedData = await response.json();
-
-      props.fetchMovies(fetchedData.data);
-    })();
-  }, []);
+    fetchMovies();
+  }, [fetchMovies]);
 
   return (
     <ErrorBoundary>
@@ -27,7 +20,7 @@ const App = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchMovies: (movies) => dispatch(fetchMoviesSuccess(movies)),
+  fetchMovies: () => dispatch(movieActions.fetchMovies()),
 });
 
 export default connect(null, mapDispatchToProps)(App);
