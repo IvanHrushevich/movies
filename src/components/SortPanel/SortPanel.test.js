@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { SortPanel } from './SortPanel';
+import SortPanel from './SortPanel';
 
 describe('SortPanel', () => {
   it('should render properly', () => {

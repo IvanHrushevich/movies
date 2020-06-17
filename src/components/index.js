@@ -1,10 +1,10 @@
 import Content from './Content/Content';
+import SortPanel from './SortPanel/SortPanel';
+import Header from './Header/Header';
 
-export * from './Header/Header';
 export * from './Footer/Footer';
-export * from './SortPanel/SortPanel';
 export * from './MovieCard/MovieCard';
 
 export * from './UI/index';
 
-export { Content };
+export { Content, Header, SortPanel };
