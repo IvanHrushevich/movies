@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import classes from './Header.module.scss';
 import SortPanel from '../SortPanel/SortPanel';
-import { Logo, SearchControl, SortControl } from '../UI/index';
+import { Logo, SearchControl, SortControl } from '../../components/index';
 import { movieActions } from '../../store/index';
 
 export const Header = (props) => (

@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import classes from './Content.module.scss';
-import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieCard } from '../../components/index';
 
 const Content = ({ movies }) => {
   const movieCards = movies.map((movie) => (
     <MovieCard
       src={movie.poster_path}
       title={movie.title}
-      genre={movie.genre}
-      year={movie.year}
+      genre={movie.genres.join(' ')}
+      year={Number(parseInt(movie.release_date))}
       key={movie.id}
     />
   ));

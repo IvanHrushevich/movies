@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import classes from './SortPanel.module.scss';
-import { SortControl } from '../UI/index';
+import { SortControl } from '../../components/index';
 import { movieActions } from '../../store/index';
 
 const SortPanel = (props) => (

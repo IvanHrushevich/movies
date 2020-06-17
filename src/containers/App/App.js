@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import { Content, Footer, Header } from '../../components/index';
+import { Footer } from '../../components/index';
 import { ErrorBoundary } from '../../hoc/index';
 import { movieActions } from '../../store/index';
+import Content from '../Content/Content';
+import Header from '../Header/Header';
 
 const App = ({ fetchMovies }) => {
   useEffect(() => {
