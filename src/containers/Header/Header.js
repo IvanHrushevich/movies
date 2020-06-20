@@ -14,7 +14,10 @@ export const Header = (props) => (
         <p className={classes.title}>FIND YOUR MOVIE</p>
         <div className={classes.searchControl}>
           <SearchControl
-            onSearchClick={(searchStr) => props.fetchMovies(searchStr)}
+            onSearchClick={(searchStr) => {
+              props.changeSearchStr(searchStr);
+              props.fetchMovies();
+            }}
           />
         </div>
         <SortControl
@@ -29,7 +32,10 @@ export const Header = (props) => (
             value: 'genres',
           }}
           inputName="searchBy"
-          onChange={(event) => props.changeSearchBy(event.target.value)}
+          onChange={(event) => {
+            props.changeSearchBy(event.target.value);
+            props.fetchMovies();
+          }}
         />
       </div>
     </header>
@@ -38,8 +44,9 @@ export const Header = (props) => (
 );
 
 const mapDispatchToProps = (dispatch) => ({
+  changeSearchStr: (value) => dispatch(movieActions.changeSearchStr(value)),
   changeSearchBy: (value) => dispatch(movieActions.changeSearchBy(value)),
-  fetchMovies: (searchStr) => dispatch(movieActions.fetchMovies(searchStr)),
+  fetchMovies: () => dispatch(movieActions.fetchMovies()),
 });
 
 export default connect(null, mapDispatchToProps)(Header);

@@ -1,10 +1,12 @@
 import * as actionTypes from './actionTypes';
 
-export const fetchMovies = (searchStr) => ({
+export const changeSearchStr = (searchStr) => ({
+  type: actionTypes.CHANGE_SEARCH_STR,
+  payload: searchStr,
+});
+
+export const fetchMovies = () => ({
   type: actionTypes.FETCH_MOVIES,
-  payload: {
-    searchStr,
-  },
 });
 
 export const fetchMoviesSuccess = (movies) => ({

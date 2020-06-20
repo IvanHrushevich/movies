@@ -4,10 +4,17 @@ const initialState = {
   movies: [],
   searchBy: 'title',
   sortBy: 'release_date',
+  searchStr: '',
 };
 
 export const moviesReducer = (state = initialState, action) => {
   switch (action.type) {
+    case actionTypes.CHANGE_SEARCH_STR:
+      return {
+        ...state,
+        searchStr: action.payload,
+      };
+
     case actionTypes.FETCH_MOVIES_SUCCESS:
       return {
         ...state,
