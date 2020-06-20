@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Header from './Header';
-import { Logo, SearchControl, SortControl } from '../UI/index';
+import { Logo, SearchControl, SortControl } from '../../components/index';
 
 describe('Header', () => {
   let component;

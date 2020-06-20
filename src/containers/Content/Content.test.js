@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import Content from './Content';
-import { MovieCard } from '../MovieCard/MovieCard';
+import { MovieCard } from '../../components/index';
 
 describe('Content', () => {
   it('should render properly', () => {
