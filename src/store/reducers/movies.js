@@ -2,8 +2,8 @@ import { actionTypes } from '../actions/index';
 
 const initialState = {
   movies: [],
-  seacrhBy: 'title',
-  sortBy: 'releaseDate',
+  searchBy: 'title',
+  sortBy: 'release_date',
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -17,7 +17,7 @@ export const moviesReducer = (state = initialState, action) => {
     case actionTypes.CHANGE_SEARCH_BY:
       return {
         ...state,
-        seacrhBy: action.payload,
+        searchBy: action.payload,
       };
 
     case actionTypes.CHANGE_SORT_BY:

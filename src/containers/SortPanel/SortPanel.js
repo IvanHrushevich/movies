@@ -12,12 +12,12 @@ const SortPanel = (props) => (
         title="sort by"
         btn1={{
           label: 'release date',
-          value: 'releaseDate',
+          value: 'release_date',
           checked: true,
         }}
         btn2={{
           label: 'rating',
-          value: 'rating',
+          value: 'vote_average',
         }}
         inputName="sortBy"
         onChange={(event) => props.changeSortBy(event.target.value)}

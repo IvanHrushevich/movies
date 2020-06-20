@@ -13,7 +13,9 @@ export const Header = (props) => (
       <div className={`container-global ${classes.searchBlock}`}>
         <p className={classes.title}>FIND YOUR MOVIE</p>
         <div className={classes.searchControl}>
-          <SearchControl />
+          <SearchControl
+            onSearchClick={(searchStr) => props.fetchMovies(searchStr)}
+          />
         </div>
         <SortControl
           title="search by"
@@ -24,7 +26,7 @@ export const Header = (props) => (
           }}
           btn2={{
             label: 'genre',
-            value: 'genre',
+            value: 'genres',
           }}
           inputName="searchBy"
           onChange={(event) => props.changeSearchBy(event.target.value)}
@@ -37,6 +39,7 @@ export const Header = (props) => (
 
 const mapDispatchToProps = (dispatch) => ({
   changeSearchBy: (value) => dispatch(movieActions.changeSearchBy(value)),
+  fetchMovies: (searchStr) => dispatch(movieActions.fetchMovies(searchStr)),
 });
 
 export default connect(null, mapDispatchToProps)(Header);

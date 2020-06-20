@@ -11,7 +11,7 @@ const Content = ({ movies }) => {
       src={movie.poster_path}
       title={movie.title}
       genre={movie.genres.join(' ')}
-      year={Number(parseInt(movie.release_date))}
+      year={parseInt(movie.release_date)}
       key={movie.id}
     />
   ));
