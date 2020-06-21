@@ -6,7 +6,7 @@ import SortPanel from '../SortPanel/SortPanel';
 import { Logo, SearchControl, SortControl } from '../../components/index';
 import { movieActions } from '../../store/index';
 
-export const Header = (props) => (
+const Header = (props) => (
   <>
     <header className={classes.sectionHeader}>
       <Logo />
