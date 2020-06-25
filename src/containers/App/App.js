@@ -7,6 +7,7 @@ import { ErrorBoundary } from '../../hoc/index';
 import { movieActions } from '../../store/index';
 import Content from '../Content/Content';
 import Header from '../Header/Header';
+import MoviePage from '../MoviePage/MoviePage';
 
 const App = ({ fetchMovies }) => {
   useEffect(() => {
@@ -19,6 +20,9 @@ const App = ({ fetchMovies }) => {
         <Route path="/" exact>
           <Header />
           <Content />
+        </Route>
+        <Route path="/film/:id">
+          <MoviePage />
         </Route>
         <Route>
           <NotFound />
