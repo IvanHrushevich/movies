@@ -82,6 +82,8 @@ module.exports = {
   },
   devServer: {
     contentBase: './dist',
+    port: 3000,
+    historyApiFallback: true,
   },
   performance: { hints: false },
   mode: isDevelopment ? 'development' : 'production',

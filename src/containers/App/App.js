@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Switch, Route } from 'react-router-dom';
 
-import { Footer } from '../../components/index';
+import { Footer, NotFound } from '../../components/index';
 import { ErrorBoundary } from '../../hoc/index';
 import { movieActions } from '../../store/index';
 import Content from '../Content/Content';
@@ -14,8 +15,15 @@ const App = ({ fetchMovies }) => {
 
   return (
     <ErrorBoundary>
-      <Header />
-      <Content />
+      <Switch>
+        <Route path="/" exact>
+          <Header />
+          <Content />
+        </Route>
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
       <Footer />
     </ErrorBoundary>
   );
