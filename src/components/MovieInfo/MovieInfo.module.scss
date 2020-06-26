@@ -1,0 +1,66 @@
+@import '../../shared/variables.scss';
+
+.container {
+  display: flex;
+}
+
+.pic {
+  height: 45rem;
+  margin-right: 7rem;
+}
+
+.info {
+  max-width: 67rem;
+}
+
+.titleBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 5rem;
+}
+
+.voteBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid $white;
+  border-radius: 50%;
+  margin-left: 2rem;
+}
+
+.vote {
+  font-size: 2rem;
+  color: $green;
+}
+
+.genre {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.year,
+.runtime {
+  font-size: 2.5rem;
+  color: $red;
+}
+
+.runtime {
+  margin-left: 3rem;
+}
+
+.unit {
+  font-size: 1.4rem;
+  margin-left: 0.7rem;
+  color: $gray;
+}
+
+.overview {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+}
