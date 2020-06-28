@@ -42,7 +42,7 @@ export const MovieInfo = ({
 MovieInfo.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string,
-  vote: PropTypes.string,
+  vote: PropTypes.number,
   genre: PropTypes.string,
   year: PropTypes.number,
   runtime: PropTypes.number,

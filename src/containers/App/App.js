@@ -7,10 +7,11 @@ import { ErrorBoundary } from '../../hoc/index';
 import { movieActions } from '../../store/index';
 import MoviePage from '../MoviePage/MoviePage';
 
-const App = ({ fetchMovies }) => {
-  useEffect(() => {
+const App = ({ changeSearchStr, fetchMovies }) => {
+  const searchMovie = (searchStr) => {
+    changeSearchStr(searchStr);
     fetchMovies();
-  }, [fetchMovies]);
+  };
 
   return (
     <ErrorBoundary>
@@ -20,6 +21,12 @@ const App = ({ fetchMovies }) => {
         </Route>
         <Route path="/film/:id">
           <MoviePage />
+        </Route>
+        <Route path="/search/:searchStr">
+          <SearchPage searchMovie={searchMovie} />
+        </Route>
+        <Route path="/search">
+          <SearchPage />
         </Route>
         <Route path="/not-found">
           <NotFound />
@@ -33,6 +40,7 @@ const App = ({ fetchMovies }) => {
 
 const mapDispatchToProps = (dispatch) => ({
   fetchMovies: () => dispatch(movieActions.fetchMovies()),
+  changeSearchStr: (value) => dispatch(movieActions.changeSearchStr(value)),
 });
 
 export default connect(null, mapDispatchToProps)(App);

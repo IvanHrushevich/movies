@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import classes from './SearchPanel.module.scss';
 import SortPanel from '../SortPanel/SortPanel';
@@ -15,8 +16,7 @@ const SearchPanel = (props) => (
         <div className={classes.searchControl}>
           <SearchControl
             onSearchClick={(searchStr) => {
-              props.changeSearchStr(searchStr);
-              props.fetchMovies();
+              props.history.push(`/search/${searchStr}`);
             }}
           />
         </div>
@@ -43,9 +43,7 @@ const SearchPanel = (props) => (
 );
 
 const mapDispatchToProps = (dispatch) => ({
-  changeSearchStr: (value) => dispatch(movieActions.changeSearchStr(value)),
   changeSearchBy: (value) => dispatch(movieActions.changeSearchBy(value)),
-  fetchMovies: () => dispatch(movieActions.fetchMovies()),
 });
 
-export default connect(null, mapDispatchToProps)(SearchPanel);
+export default connect(null, mapDispatchToProps)(withRouter(SearchPanel));
