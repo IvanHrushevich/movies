@@ -1,6 +1,6 @@
 import App from './App/App';
 import Content from './Content/Content';
-import Header from './Header/Header';
+import SearchPanel from './SearchPanel/SearchPanel';
 import SortPanel from './SortPanel/SortPanel';
 
-export { App, Content, Header, SortPanel };
+export { App, Content, SearchPanel, SortPanel };

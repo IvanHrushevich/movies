@@ -3,7 +3,7 @@ import { mount } from 'enzyme';
 import { Provider } from 'react-redux';
 
 import App from './App';
-import Header from '../Header/Header';
+import SearchPanel from '../SearchPanel/SearchPanel';
 import { mockStore } from '../../test-utils/index';
 
 describe('App', () => {
@@ -25,6 +25,6 @@ describe('App', () => {
   });
 
   it('should render properly', () => {
-    expect(component.find(Header)).toHaveLength(1);
+    expect(component.find(SearchPanel)).toHaveLength(1);
   });
 });
