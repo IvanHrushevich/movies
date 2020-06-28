@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 
 import classes from './SortControl.module.scss';
 
-export const SortControl = ({ title, btn1, btn2, inputName, onChange }) => (
+export const SortControl = ({
+  title,
+  btnLeft,
+  btnRight,
+  inputName,
+  onChange,
+}) => (
   <div className={classes.container}>
     <span className={classes.title}>{title}</span>
 
@@ -11,33 +17,33 @@ export const SortControl = ({ title, btn1, btn2, inputName, onChange }) => (
       className={classes.input}
       type="radio"
       name={inputName}
-      value={btn1.value}
-      id={btn1.label}
-      defaultChecked={btn1.checked}
+      value={btnLeft.value}
+      id={btnLeft.label}
+      defaultChecked={btnLeft.checked}
       onChange={onChange}
     />
-    <label className={classes.label} htmlFor={btn1.label}>
-      {btn1.label}
+    <label className={classes.label} htmlFor={btnLeft.label}>
+      {btnLeft.label}
     </label>
 
     <input
       className={classes.input}
       type="radio"
       name={inputName}
-      value={btn2.value}
-      id={btn2.label}
-      defaultChecked={btn2.checked}
+      value={btnRight.value}
+      id={btnRight.label}
+      defaultChecked={btnRight.checked}
       onChange={onChange}
     />
-    <label className={classes.label} htmlFor={btn2.label}>
-      {btn2.label}
+    <label className={classes.label} htmlFor={btnRight.label}>
+      {btnRight.label}
     </label>
   </div>
 );
 
 SortControl.propTypes = {
   title: PropTypes.string,
-  btn1Label: PropTypes.string,
-  btn2Label: PropTypes.string,
+  btnLeft: PropTypes.object,
+  btnRight: PropTypes.object,
   inputName: PropTypes.string,
 };

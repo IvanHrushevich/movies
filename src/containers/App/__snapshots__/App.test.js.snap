@@ -74,14 +74,14 @@ exports[`App should render properly 1`] = `
                   </SearchControl>
                 </div>
                 <SortControl
-                  btn1={
+                  btnLeft={
                     Object {
                       "checked": true,
                       "label": "title",
                       "value": "title",
                     }
                   }
-                  btn2={
+                  btnRight={
                     Object {
                       "label": "genre",
                       "value": "genres",
@@ -144,14 +144,14 @@ exports[`App should render properly 1`] = `
                     className="container-global panelContainer"
                   >
                     <SortControl
-                      btn1={
+                      btnLeft={
                         Object {
                           "checked": true,
                           "label": "release date",
                           "value": "release_date",
                         }
                       }
-                      btn2={
+                      btnRight={
                         Object {
                           "label": "rating",
                           "value": "vote_average",

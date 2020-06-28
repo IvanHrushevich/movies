@@ -10,12 +10,12 @@ const SortPanel = (props) => (
     <div className={`container-global ${classes.panelContainer}`}>
       <SortControl
         title="sort by"
-        btn1={{
+        btnLeft={{
           label: 'release date',
           value: 'release_date',
           checked: true,
         }}
-        btn2={{
+        btnRight={{
           label: 'rating',
           value: 'vote_average',
         }}

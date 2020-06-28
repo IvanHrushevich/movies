@@ -2,7 +2,7 @@ import { put, select } from 'redux-saga/effects';
 
 import { movieActions } from '../actions/index';
 
-const baseUrl = 'http://reactjs-cdp.herokuapp.com';
+const BASE_URL = 'http://reactjs-cdp.herokuapp.com';
 
 export function* fetchMovies() {
   const state = yield select();
@@ -13,7 +13,7 @@ export function* fetchMovies() {
   }
 
   try {
-    const response = yield fetch(`${baseUrl}/movies${queries}`);
+    const response = yield fetch(`${BASE_URL}/movies${queries}`);
     const fetchedData = yield response.json();
     const movies = yield fetchedData.data;
 

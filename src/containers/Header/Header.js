@@ -22,12 +22,12 @@ const Header = (props) => (
         </div>
         <SortControl
           title="search by"
-          btn1={{
+          btnLeft={{
             label: 'title',
             value: 'title',
             checked: true,
           }}
-          btn2={{
+          btnRight={{
             label: 'genre',
             value: 'genres',
           }}
