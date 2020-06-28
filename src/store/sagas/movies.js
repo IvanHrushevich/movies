@@ -25,12 +25,12 @@ export function* fetchMovies() {
 
 export function* fetchSelectedMovie(action) {
   try {
-    const response = yield fetch(`${baseUrl}/movies/${action.payload.id}`);
+    const response = yield fetch(`${BASE_URL}/movies/${action.payload.id}`);
     const selectedMovie = yield response.json();
 
     const genres = selectedMovie.genres.join(',');
     const moviesWithSameGenresResponse = yield fetch(
-      `${baseUrl}/movies?searchBy=genres&filter=${genres}`
+      `${BASE_URL}/movies?searchBy=genres&filter=${genres}`
     );
     const fetchedMoviesWithSameGenres = yield moviesWithSameGenresResponse.json();
     const moviesWithSameGenres = yield fetchedMoviesWithSameGenres.data;
