@@ -20,5 +20,5 @@ MovieCard.propTypes = {
   src: PropTypes.string,
   title: PropTypes.string,
   genre: PropTypes.string,
-  year: PropTypes.string,
+  year: PropTypes.number,
 };

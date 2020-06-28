@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content should render properly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(Content)>
+    <Content
+      dispatch={[Function]}
+      movies={Array []}
+    >
+      <main
+        className="section"
+      >
+        <div
+          className="cardsWrapper"
+        />
+      </main>
+    </Content>
+  </Connect(Content)>
+</Provider>
+`;

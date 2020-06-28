@@ -1,56 +1,247 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App should render properly 1`] = `
-<ErrorBoundary>
-  <Header />
-  <Content
-    movies={
-      Array [
-        Object {
-          "genre": "Action",
-          "id": "a1",
-          "src": "https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-        Object {
-          "genre": "Action",
-          "id": "a2",
-          "src": "https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-        Object {
-          "genre": "Action",
-          "id": "a3",
-          "src": "https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-        Object {
-          "genre": "Action",
-          "id": "a4",
-          "src": "https://image.tmdb.org/t/p/w500/rPdtLWNsZmAtoZl9PK7S2wE3qiS.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-        Object {
-          "genre": "Action",
-          "id": "a5",
-          "src": "https://image.tmdb.org/t/p/w500/dL11DBPcRhWWnJcFXl9A07MrqTI.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-        Object {
-          "genre": "Action",
-          "id": "a6",
-          "src": "https://image.tmdb.org/t/p/w500/oIltQs7MPk7VQFG3DJfgC63mShU.jpg",
-          "title": "Kill Bill: Vol.2",
-          "year": "2004",
-        },
-      ]
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
     }
-  />
-  <Footer />
-</ErrorBoundary>
+  }
+>
+  <Connect(App)>
+    <App
+      fetchMovies={[Function]}
+    >
+      <ErrorBoundary>
+        <Connect(Header)>
+          <Header
+            changeSearchBy={[Function]}
+            changeSearchStr={[Function]}
+            fetchMovies={[Function]}
+          >
+            <header
+              className="sectionHeader"
+            >
+              <Logo>
+                <div
+                  className="container"
+                >
+                  <span
+                    className="titleBold"
+                  >
+                    netflix
+                  </span>
+                  <span>
+                    roulette
+                  </span>
+                </div>
+              </Logo>
+              <div
+                className="container-global searchBlock"
+              >
+                <p
+                  className="title"
+                >
+                  FIND YOUR MOVIE
+                </p>
+                <div
+                  className="searchControl"
+                >
+                  <SearchControl
+                    onSearchClick={[Function]}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <input
+                        className="input"
+                        onChange={[Function]}
+                        placeholder="Search"
+                        value=""
+                      />
+                      <button
+                        className="button"
+                        onClick={[Function]}
+                      >
+                        search
+                      </button>
+                    </div>
+                  </SearchControl>
+                </div>
+                <SortControl
+                  btnLeft={
+                    Object {
+                      "checked": true,
+                      "label": "title",
+                      "value": "title",
+                    }
+                  }
+                  btnRight={
+                    Object {
+                      "label": "genre",
+                      "value": "genres",
+                    }
+                  }
+                  inputName="searchBy"
+                  onChange={[Function]}
+                  title="search by"
+                >
+                  <div
+                    className="container"
+                  >
+                    <span
+                      className="title"
+                    >
+                      search by
+                    </span>
+                    <input
+                      className="input"
+                      defaultChecked={true}
+                      id="title"
+                      name="searchBy"
+                      onChange={[Function]}
+                      type="radio"
+                      value="title"
+                    />
+                    <label
+                      className="label"
+                      htmlFor="title"
+                    >
+                      title
+                    </label>
+                    <input
+                      className="input"
+                      id="genre"
+                      name="searchBy"
+                      onChange={[Function]}
+                      type="radio"
+                      value="genres"
+                    />
+                    <label
+                      className="label"
+                      htmlFor="genre"
+                    >
+                      genre
+                    </label>
+                  </div>
+                </SortControl>
+              </div>
+            </header>
+            <Connect(SortPanel)>
+              <SortPanel
+                changeSortBy={[Function]}
+                fetchMovies={[Function]}
+              >
+                <section
+                  className="section"
+                >
+                  <div
+                    className="container-global panelContainer"
+                  >
+                    <SortControl
+                      btnLeft={
+                        Object {
+                          "checked": true,
+                          "label": "release date",
+                          "value": "release_date",
+                        }
+                      }
+                      btnRight={
+                        Object {
+                          "label": "rating",
+                          "value": "vote_average",
+                        }
+                      }
+                      inputName="sortBy"
+                      onChange={[Function]}
+                      title="sort by"
+                    >
+                      <div
+                        className="container"
+                      >
+                        <span
+                          className="title"
+                        >
+                          sort by
+                        </span>
+                        <input
+                          className="input"
+                          defaultChecked={true}
+                          id="release date"
+                          name="sortBy"
+                          onChange={[Function]}
+                          type="radio"
+                          value="release_date"
+                        />
+                        <label
+                          className="label"
+                          htmlFor="release date"
+                        >
+                          release date
+                        </label>
+                        <input
+                          className="input"
+                          id="rating"
+                          name="sortBy"
+                          onChange={[Function]}
+                          type="radio"
+                          value="vote_average"
+                        />
+                        <label
+                          className="label"
+                          htmlFor="rating"
+                        >
+                          rating
+                        </label>
+                      </div>
+                    </SortControl>
+                  </div>
+                </section>
+              </SortPanel>
+            </Connect(SortPanel)>
+          </Header>
+        </Connect(Header)>
+        <Connect(Content)>
+          <Content
+            dispatch={[Function]}
+            movies={Array []}
+          >
+            <main
+              className="section"
+            >
+              <div
+                className="cardsWrapper"
+              />
+            </main>
+          </Content>
+        </Connect(Content)>
+        <Footer>
+          <footer
+            className="section"
+          >
+            <Logo>
+              <div
+                className="container"
+              >
+                <span
+                  className="titleBold"
+                >
+                  netflix
+                </span>
+                <span>
+                  roulette
+                </span>
+              </div>
+            </Logo>
+          </footer>
+        </Footer>
+      </ErrorBoundary>
+    </App>
+  </Connect(App)>
+</Provider>
 `;

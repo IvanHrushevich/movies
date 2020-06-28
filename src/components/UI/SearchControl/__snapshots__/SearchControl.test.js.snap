@@ -6,10 +6,13 @@ exports[`SearchControl should render properly 1`] = `
 >
   <input
     className="input"
+    onChange={[Function]}
     placeholder="Search"
+    value=""
   />
   <button
     className="button"
+    onClick={[Function]}
   >
     search
   </button>
