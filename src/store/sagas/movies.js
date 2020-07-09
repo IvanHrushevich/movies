@@ -22,3 +22,26 @@ export function* fetchMovies() {
     console.error('error', error);
   }
 }
+
+export function* fetchSelectedMovie(action) {
+  try {
+    const response = yield fetch(`${baseUrl}/movies/${action.payload.id}`);
+    const selectedMovie = yield response.json();
+
+    const genres = selectedMovie.genres.join(',');
+    const moviesWithSameGenresResponse = yield fetch(
+      `${baseUrl}/movies?searchBy=genres&filter=${genres}`
+    );
+    const fetchedMoviesWithSameGenres = yield moviesWithSameGenresResponse.json();
+    const moviesWithSameGenres = yield fetchedMoviesWithSameGenres.data;
+
+    yield put(
+      movieActions.fetchSelectedMovieSuccess(
+        selectedMovie,
+        moviesWithSameGenres
+      )
+    );
+  } catch (error) {
+    console.error('error', error);
+  }
+}

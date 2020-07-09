@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { Footer } from '../../components/index';
+import { Footer, NotFound, SearchPage } from '../../components/index';
 import { ErrorBoundary } from '../../hoc/index';
 import { movieActions } from '../../store/index';
-import Content from '../Content/Content';
-import Header from '../Header/Header';
+import MoviePage from '../MoviePage/MoviePage';
 
 const App = ({ fetchMovies }) => {
   useEffect(() => {
@@ -14,8 +14,18 @@ const App = ({ fetchMovies }) => {
 
   return (
     <ErrorBoundary>
-      <Header />
-      <Content />
+      <Switch>
+        <Route path="/" exact>
+          <SearchPage />
+        </Route>
+        <Route path="/film/:id">
+          <MoviePage />
+        </Route>
+        <Route path="/not-found">
+          <NotFound />
+        </Route>
+        <Redirect to="/not-found" />
+      </Switch>
       <Footer />
     </ErrorBoundary>
   );

@@ -9,6 +9,16 @@ export const fetchMovies = () => ({
   type: actionTypes.FETCH_MOVIES,
 });
 
+export const fetchSelectedMovie = (id) => ({
+  type: actionTypes.FETCH_SELECTED_MOVIE,
+  payload: { id },
+});
+
+export const fetchSelectedMovieSuccess = (selectedMovie, movies) => ({
+  type: actionTypes.FETCH_SELECTED_MOVIE_SUCCESS,
+  payload: { selectedMovie, movies },
+});
+
 export const fetchMoviesSuccess = (movies) => ({
   type: actionTypes.FETCH_MOVIES_SUCCESS,
   payload: { movies },

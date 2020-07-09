@@ -18,8 +18,8 @@ exports[`App should render properly 1`] = `
       fetchMovies={[Function]}
     >
       <ErrorBoundary>
-        <Connect(Header)>
-          <Header
+        <Connect(SearchPanel)>
+          <SearchPanel
             changeSearchBy={[Function]}
             changeSearchStr={[Function]}
             fetchMovies={[Function]}
@@ -204,8 +204,8 @@ exports[`App should render properly 1`] = `
                 </section>
               </SortPanel>
             </Connect(SortPanel)>
-          </Header>
-        </Connect(Header)>
+          </SearchPanel>
+        </Connect(SearchPanel)>
         <Connect(Content)>
           <Content
             dispatch={[Function]}

@@ -1,14 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Header from './Header';
+import SearchPanel from './SearchPanel';
 import { Logo, SearchControl, SortControl } from '../../components/index';
 
-describe('Header', () => {
+describe('SearchPanel', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<Header />);
+    component = shallow(<SearchPanel />);
   });
 
   it('should render properly', () => {
@@ -16,7 +16,7 @@ describe('Header', () => {
   });
 
   it('should contain Logo, SearchControl and SortControl components', () => {
-    const component = shallow(<Header />);
+    const component = shallow(<SearchPanel />);
 
     expect(component.find(SearchControl)).toHaveLength(1);
     expect(component.find(SortControl)).toHaveLength(1);

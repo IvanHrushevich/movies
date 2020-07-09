@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import classes from './MovieCard.module.scss';
 
-export const MovieCard = ({ src, title, genre, year }) => (
-  <a className={classes.container} href="/">
+export const MovieCard = ({ src, title, genre, year, id }) => (
+  <Link className={classes.container} to={'/film/' + id}>
     <img className={classes.pic} src={src}></img>
     <div className={classes.info}>
       <div>
@@ -13,7 +14,7 @@ export const MovieCard = ({ src, title, genre, year }) => (
       </div>
       <span className={classes.year}>{year}</span>
     </div>
-  </a>
+  </Link>
 );
 
 MovieCard.propTypes = {
@@ -21,4 +22,5 @@ MovieCard.propTypes = {
   title: PropTypes.string,
   genre: PropTypes.string,
   year: PropTypes.number,
+  id: PropTypes.number,
 };

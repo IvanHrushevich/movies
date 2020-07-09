@@ -12,6 +12,7 @@ const Content = ({ movies }) => {
       title={movie.title}
       genre={movie.genres.join(' ')}
       year={parseInt(movie.release_date)}
+      id={movie.id}
       key={movie.id}
     />
   ));

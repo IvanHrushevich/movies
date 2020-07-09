@@ -5,6 +5,7 @@ const initialState = {
   searchBy: 'title',
   sortBy: 'release_date',
   searchStr: '',
+  selectedMovie: null,
 };
 
 export const moviesReducer = (state = initialState, action) => {
@@ -31,6 +32,13 @@ export const moviesReducer = (state = initialState, action) => {
       return {
         ...state,
         sortBy: action.payload,
+      };
+
+    case actionTypes.FETCH_SELECTED_MOVIE_SUCCESS:
+      return {
+        ...state,
+        selectedMovie: action.payload.selectedMovie,
+        movies: action.payload.movies,
       };
 
     default:

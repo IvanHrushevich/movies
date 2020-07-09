@@ -1,0 +1,15 @@
+@import '../../shared/variables.scss';
+
+.container {
+  flex-grow: 1;
+  background-color: $content-section-color;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message {
+  width: 20rem;
+  height: 20rem;
+}

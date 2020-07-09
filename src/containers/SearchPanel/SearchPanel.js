@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import classes from './Header.module.scss';
+import classes from './SearchPanel.module.scss';
 import SortPanel from '../SortPanel/SortPanel';
 import { Logo, SearchControl, SortControl } from '../../components/index';
 import { movieActions } from '../../store/index';
 
-const Header = (props) => (
+const SearchPanel = (props) => (
   <>
     <header className={classes.sectionHeader}>
       <Logo />
@@ -34,7 +34,6 @@ const Header = (props) => (
           inputName="searchBy"
           onChange={(event) => {
             props.changeSearchBy(event.target.value);
-            props.fetchMovies();
           }}
         />
       </div>
@@ -49,4 +48,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchMovies: () => dispatch(movieActions.fetchMovies()),
 });
 
-export default connect(null, mapDispatchToProps)(Header);
+export default connect(null, mapDispatchToProps)(SearchPanel);
